@@ -1,0 +1,30 @@
+info:
+  name: SO CanvassSheet
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/purchasing/purchase_canvass_sheet_so
+  body:
+    type: json
+    data: "{\r
+
+      \    \"item_id\": 1,\r
+
+      \    \"supplier_id\": 50098,\r
+
+      \    \"supplier_name\": \"31232\",\r
+
+      \    \"contact_no\": \"dsad\",\r
+
+      \    \"start_date\": \"04-24-2025\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

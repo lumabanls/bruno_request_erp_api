@@ -1,0 +1,28 @@
+info:
+  name: update_purchaser_sales_order
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/order
+  body:
+    type: json
+    data: "{\r
+
+      \    \"order_id\": 20007,\r
+
+      \    \"doc\": \"0001\",\r
+
+      \    //\"purchaser\": \"~\"\r
+
+      \    \"purchaser\": \"PURCH-PO-8\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: delete_material
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/material
+  body:
+    type: json
+    data: |-
+      {
+          "id": 6,
+          "code": "KALAWANG",
+          "name": "KALAWANG"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

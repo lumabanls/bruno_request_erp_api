@@ -1,0 +1,24 @@
+info:
+  name: update_project
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/project
+  body:
+    type: json
+    data: |-
+      {
+          "id": 5,
+          "project_name": "test project 1 vvvvvvvv",
+          "customer_name": "test customer vvvvvvvv",
+          "web_socket_id": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

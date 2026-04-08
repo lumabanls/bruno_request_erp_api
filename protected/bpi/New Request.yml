@@ -1,0 +1,36 @@
+info:
+  name: New Request
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/bpi/main
+  body:
+    type: json
+    data: "[\r
+
+      \    {\r
+
+      \        \"id\": 10036,\r
+
+      \        \"is_main\": true\r
+
+      \    },\r
+
+      \    {\r
+
+      \        \"id\": 30056,\r
+
+      \        \"is_main\": false\r
+
+      \    }\r
+
+      ]"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

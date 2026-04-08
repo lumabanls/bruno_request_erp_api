@@ -1,0 +1,24 @@
+info:
+  name: InventoryTracker_put
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/inv/tracker
+  body:
+    type: json
+    data: "{\r
+
+      \    \"remarks\": \"hellosadsadasd\",\r
+
+      \        \"id\": 3\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

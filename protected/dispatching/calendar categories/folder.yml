@@ -1,0 +1,7 @@
+info:
+  name: calendar categories
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

@@ -1,0 +1,23 @@
+info:
+  name: delete_class
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/class
+  body:
+    type: json
+    data: |-
+      {
+          "id": 18,
+          "code": "dsadasd",
+          "name": "dadasda"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

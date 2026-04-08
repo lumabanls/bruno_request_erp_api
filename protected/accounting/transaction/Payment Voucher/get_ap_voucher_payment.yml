@@ -1,0 +1,28 @@
+info:
+  name: get_ap_voucher_payment
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/accounting/payment_voucher/ap_voucher/50227
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"COA-123\",\r
+
+      \    \"name\": \"COA-231\",\r
+
+      \    \"class_id\": 2055,\r
+
+      \    \"group_id\": 3018\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

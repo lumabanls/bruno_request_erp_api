@@ -1,0 +1,26 @@
+info:
+  name: register_account
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/register
+  body:
+    type: json
+    data: |-
+      {
+          "first_name": "Breth",
+          "last_name": "Ackerman",
+          "department": "PURCH",
+          "position": "Purchasing Officer",
+          "motherboard_serial_no": "macserial",
+          "machine_name": "mac_mini"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

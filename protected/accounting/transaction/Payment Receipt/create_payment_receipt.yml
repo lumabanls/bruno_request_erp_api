@@ -1,0 +1,58 @@
+info:
+  name: create_payment_receipt
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/accounting/payment_receipt
+  body:
+    type: json
+    data: "{\r
+
+      \    \"bulk_invoice_receipt\": {\r
+
+      \        \"supplier\": \"asdasda\",\r
+
+      \        \"supplier_id\": 1,\r
+
+      \        \"supplier_name\": \"Wally Bayola\",\r
+
+      \        \"code\": \"2323\",\r
+
+      \        \"reference_so\": \"0002\",\r
+
+      \        \"prepared_by\": \"Kuroko\",\r
+
+      \        \"doc_date\": \"01/30/2026\"\r
+
+      \    },\r
+
+      \    \"bulk_invoice_receipt_details\": [\r
+
+      \        {\r
+
+      \            \"payment_charge_code\": \"1010\",\r
+
+      \            \"charge_description\": \"sdddfds\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"payment_charge_code\": \"1010\",\r
+
+      \            \"charge_description\": \"sdddfds\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

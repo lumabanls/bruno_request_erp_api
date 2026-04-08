@@ -1,0 +1,42 @@
+info:
+  name: create_ap_voucher
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/accounting/ap_voucher
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ap_voucher\": {\r
+
+      \        \"supplier\": \"ABC Trading Corporation\",\r
+
+      \        \"supplier_code\": \"SUP-001\",\r
+
+      \        \"supplier_id\": 25,\r
+
+      \        \"currency\": \"PHP\",\r
+
+      \        \"doc_date\": \"2026-03-12\",\r
+
+      \        \"transaction_amount\": 15000.75,\r
+
+      \        \"prepared_by\": \"Patrick Bautista\"\r
+
+      \    },\r
+
+      \    \"ap_voucher_details\": [\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

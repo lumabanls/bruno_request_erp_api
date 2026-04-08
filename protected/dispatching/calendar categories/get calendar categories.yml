@@ -1,0 +1,24 @@
+info:
+  name: get calendar categories
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/calendar-categories/
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"test\",\r
+
+      \    \"position\": \"test\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

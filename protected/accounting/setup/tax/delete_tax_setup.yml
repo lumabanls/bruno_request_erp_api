@@ -1,0 +1,18 @@
+info:
+  name: delete_tax_setup
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/accounting/tax
+  body:
+    type: json
+    data: "{\r\n    \"id\": 10\r\n   \r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,30 @@
+info:
+  name: create_parent
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/sample/parent
+  body:
+    type: json
+    data: |-
+      {
+          "name": "parent name 8",
+          "description": "parent description 8",
+          "childf": {
+              "name": "child name 8",
+              "description": "child description 8"
+          },
+          "childs": {
+              "type": "child type 8",
+              "model": "child model 8"
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

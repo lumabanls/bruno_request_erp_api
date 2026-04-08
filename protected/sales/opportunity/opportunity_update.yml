@@ -1,0 +1,24 @@
+info:
+  name: opportunity_update
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/opportunity
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 1,\r
+
+      \    \"tag\": \"teSDAstZZZZZ\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

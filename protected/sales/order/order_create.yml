@@ -1,0 +1,118 @@
+info:
+  name: order_create
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/sales/order
+  body:
+    type: json
+    data: "{\r
+
+      \  \"customer_name\": \"Another test\",\r
+
+      \  \"customer_code\": \"SMART GEL-789TESTTTT\",\r
+
+      \  \"ship_to\": \"SMART Warehouse 5, 321 Industrial ZoneTESTTTT\",\r
+
+      \  \"bill_to\": \"SMART Accounts Dept, Global Electronics HQTESTTTT\",\r
+
+      \  \"doc\": \"ORD-20231105-0122\",\r
+
+      \  \"date\": \"2025-12-05\",\r
+
+      \  \"delivery_date\": \"2025-12-12\",\r
+
+      \  \"payment_terms\": \"SMARTCODTESTTTT\",\r
+
+      \  \"ship_type\": \"SMART Air FreightTESTTTT\",\r
+
+      \  \"ref_doc\": \"QUOT-10231101-0152\",\r
+
+      \  \"ref_id\": 2251,\r
+
+      \  \"status\": \"SMART Ready for DispatchTESTTTT\",\r
+
+      \  \"sales_executive\": \"SMART James CarterTESTTTT\",\r
+
+      \  \"receiver\": \"SMART Night Shift SupervisorTESTTTT\",\r
+
+      \  \"contact_no\": \"+912 1234 5672\",\r
+
+      \  \"remarks\": \"SMART Temperature-sensitive goodsTESTTTT\",\r
+
+      \  \"vat\": 33.67,\r
+
+      \  \"netof_vat\": 231.47,\r
+
+      \  \"total_amount_due\": \"150.14\",\r
+
+      \  \"approved_by\": \"SMART Linda MartinezTESTTTT\",\r
+
+      \  \"approved_by_id\": 300,\r
+
+      \  \"sales_order_details\": {\r
+
+      \  \"qty\": \"SMART 50 cartonsTESTTTT\",\r
+
+      \  \"item_code\": \"SMARTIC-789XTESTTTT\",\r
+
+      \  \"item_description\": \"SMART Industrial Temperature Sensors v2.5TESTTTT\",\r
+
+      \  \"delivery_preference\": \"SMART Refrigerated TransportTESTTTT\",\r
+
+      \  \"list_price\": 125.99,\r
+
+      \  \"total_price\": 1799.50,\r
+
+      \  \"status\": \"\"\r
+
+      \  }\r
+
+      }\r
+
+      \r
+
+      // {\r
+
+      //     \"customer\": \"TESTING CUSTOMER\",\r
+
+      //     \"sales_order_details\": {\r
+
+      //         \"qty\": \"1\",\r
+
+      //         \"item_code\": \"TEST 1\"\r
+
+      //     },\r
+
+      //     \"sales_order_details\": {\r
+
+      //         \"qty\": \"2\",\r
+
+      //         \"item_code\": \"TEST 2\"\r
+
+      //     }\r
+
+      // }\r
+
+      \r
+
+      // {\r
+
+      //     \"order_details_id\": 10,\r
+
+      //     \"based_id\": 8,\r
+
+      //     \"qty\": \"2\",\r
+
+      //     \"item_code\": \"TEST 2\"\r
+
+      // }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

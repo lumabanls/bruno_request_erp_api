@@ -1,0 +1,26 @@
+info:
+  name: PickActivity_delete
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/pickAct/list
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pick_activity\": {\r
+
+      \        \"id\": 17\r
+
+      \    }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

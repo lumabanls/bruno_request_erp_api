@@ -1,0 +1,23 @@
+info:
+  name: delete_ship
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/brand
+  body:
+    type: json
+    data: |-
+      {
+          "id": 10049,
+          "code": "CODE-1AAASSSS",
+          "name": "TEST 1AAASSSS"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

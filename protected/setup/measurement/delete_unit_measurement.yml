@@ -1,0 +1,26 @@
+info:
+  name: delete_unit_measurement
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/unit_measurement
+  body:
+    type: json
+    data: "   {\r
+
+      \            \"id\": 35,\r
+
+      \            \"code\": \"PACK1\",\r
+
+      \            \"name\": \"PCS\"\r
+
+      \        }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

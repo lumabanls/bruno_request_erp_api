@@ -1,0 +1,24 @@
+info:
+  name: post_pump_count
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/item/pump_count
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"CODE-321\",\r
+
+      \    \"name\": \"NEW PUMP COUNT\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

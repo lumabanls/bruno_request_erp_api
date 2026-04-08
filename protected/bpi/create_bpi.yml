@@ -1,0 +1,42 @@
+info:
+  name: create_bpi
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/bpi
+  body:
+    type: json
+    data: "{\r
+
+      \    \"sales_id\": 1,\r
+
+      \    \"name\": \"BPI 1\",\r
+
+      \    \"website\": \"WEBSITE.com\",\r
+
+      \    \"tin\": \"01-A-A-A\",\r
+
+      \    \"tel_no\": \"091A-BC-DE-FG\",\r
+
+      \    \"industries_id\": [\r
+
+      \        1,\r
+
+      \        3,\r
+
+      \        4,\r
+
+      \        5\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

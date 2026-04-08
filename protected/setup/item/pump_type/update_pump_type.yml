@@ -1,0 +1,23 @@
+info:
+  name: update_pump_type
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/item/pump_type
+  body:
+    type: json
+    data: |-
+      {
+          "id": 3,
+          "code": "CODE-33313112",
+          "name": "Thurmanssss"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

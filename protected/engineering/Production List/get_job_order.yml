@@ -1,0 +1,15 @@
+info:
+  name: get_job_order
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/engineering/job_order/0
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

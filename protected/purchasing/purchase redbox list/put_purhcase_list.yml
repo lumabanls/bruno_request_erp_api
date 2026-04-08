@@ -1,0 +1,50 @@
+info:
+  name: put_purhcase_list
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/purchasing/purchase_requisition
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pr_id\": 1,\r
+
+      \    \"doc_no\": \"PR-20251201-001\",\r
+
+      \    \"department\": \"testdepartmentedit2\",\r
+
+      \    \"purchasing_purchase_requisition_orders\": [\r
+
+      \        {\r
+
+      \        \"pr_order_id\": 2,\r
+
+      \        \"based_id\": 1,\r
+
+      \      \"net_total\": 1111\r
+
+      \        },\r
+
+      \        {\r
+
+      \        \"pr_order_id\": 1,\r
+
+      \        \"based_id\": 1,\r
+
+      \      \"net_total\": 11112\r
+
+      \        }\r
+
+      \    ]\r
+
+      \  }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

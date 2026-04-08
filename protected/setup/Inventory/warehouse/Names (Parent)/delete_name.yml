@@ -1,0 +1,41 @@
+info:
+  name: delete_name
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/warehouse/name
+  body:
+    type: json
+    data: "{\r
+
+      \  \"warehouse_name\": {\r
+
+      \    \"id\": 11\r
+
+      \     }\r
+
+      //   },\r
+
+      //   \"warehouse_address\": {\r
+
+      //     \"id\": 2\r
+
+      //   },\r
+
+      //   \"warehouse_area\": {\r
+
+      //     \"id\": 2\r
+
+      //   }\r
+
+      }\r
+
+      \r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

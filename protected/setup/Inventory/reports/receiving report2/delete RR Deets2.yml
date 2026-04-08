@@ -1,0 +1,26 @@
+info:
+  name: delete RR Deets2
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/report/receiving_details
+  body:
+    type: json
+    data: "{ \r
+
+      \  \"receiving_report_details\": {\r
+
+      \    \"id\": 6\r
+
+      \  }\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

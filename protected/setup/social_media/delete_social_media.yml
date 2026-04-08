@@ -1,0 +1,26 @@
+info:
+  name: delete_social_media
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/social
+  body:
+    type: json
+    data: "   {\r
+
+      \            \"id\": 35,\r
+
+      \            \"code\": \"FACEBOOk\",\r
+
+      \            \"name\": \"FB\"\r
+
+      \        }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

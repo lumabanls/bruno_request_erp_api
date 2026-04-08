@@ -1,0 +1,18 @@
+info:
+  name: get_position
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/setup/position
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

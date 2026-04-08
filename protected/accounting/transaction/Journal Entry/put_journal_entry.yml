@@ -1,0 +1,15 @@
+info:
+  name: put_journal_entry
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/accounting/journal_entry
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

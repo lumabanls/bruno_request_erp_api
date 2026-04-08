@@ -1,0 +1,90 @@
+info:
+  name: post RR
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/report/receiving
+  body:
+    type: json
+    data: "{\r
+
+      \    \"receiving_report\": {\r
+
+      \        \"supplier_name\": \"Jc\",\r
+
+      \        \"supplier_code\": \"000000\",\r
+
+      \        \"date_received\": \"yesterday\",\r
+
+      \        \"address\": \"\",\r
+
+      \        \"prepared_by\": \"\",\r
+
+      \        \"purchase_order_id\": null,\r
+
+      \        \"ref_doc\": \"\",\r
+
+      \        \"supplier_id\": null\r
+
+      \    },\r
+
+      \    \"receiving_report_details\": [\r
+
+      \        {\r
+
+      \            \"item_code\": \"RP001\",\r
+
+      \            \"item_description\": \"Red Pipe\",\r
+
+      \            \"ordered_qty\": \"15\",\r
+
+      \            \"ordered_uom\": \"BLK\",\r
+
+      \            \"received_qty\": \"14\",\r
+
+      \            \"received_uom\": \"BLK\",\r
+
+      \            \"rejected_qty\": \"1\",\r
+
+      \            \"rejected_uom\": \"BLK\",\r
+
+      \            \"reason_for_rejection\": \"Damaged\",\r
+
+      \            \"ref_id\": null\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"receiving_report_inventory\": [\r
+
+      \        {\r
+
+      \            \"item_code\": \"RP001\",\r
+
+      \            \"item_description\": \"Cool ah earphone\",\r
+
+      \            \"ordered_qty\": \"15\",\r
+
+      \            \"ordered_uom\": \"BLK\",\r
+
+      \            \"serial_number\": \"\",\r
+
+      \            \"bin_location\": \"\",\r
+
+      \            \"ref_id\": null\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

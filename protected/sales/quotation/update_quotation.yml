@@ -1,0 +1,84 @@
+info:
+  name: update_quotation
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/quotation
+  body:
+    type: json
+    data: "{\r
+
+      \    \"SalesQuotation\": {\r
+
+      \            \"id\": 10021,\r
+
+      \            \"project_name\": \"\",\r
+
+      \            \"customer_id\": 0,\r
+
+      \            \"application_id\": 0,\r
+
+      \            \"payment_terms_id\": 0,\r
+
+      \            \"ship_to_id\": 0,\r
+
+      \            \"bill_to_id\": 0,\r
+
+      \            \"ship_type_id\": 0,\r
+
+      \            \"purpose\": \"\",\r
+
+      \            \"date\": \"\",\r
+
+      \            \"validity_days\": \"\",\r
+
+      \            \"valid_until\": \"\",\r
+
+      \            \"warranty\": \"\",\r
+
+      \            \"address_to\": \"\",\r
+
+      \            \"thru\": \"\",\r
+
+      \            \"gross_sales\": 0,\r
+
+      \            \"vat_amount\": 0,\r
+
+      \            \"net_sales\": 0,\r
+
+      \            \"percent_discount\": 0,\r
+
+      \            \"discounted_amount\": 0,\r
+
+      \            \"cash_discount\": 0,\r
+
+      \            \"net_amount_due\": 0,\r
+
+      \            \"total_amount_due\": 0,\r
+
+      \            \"contact_1\": \"\",\r
+
+      \            \"contact_2\": \"\",\r
+
+      \            \"document_no\": \"\",\r
+
+      \            \"version_no\": \"\",\r
+
+      \            \"created_by\": \"\",\r
+
+      \            \"final_ref_no\": \"\",\r
+
+      \            \"is_finalized\": true\r
+
+      \        }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

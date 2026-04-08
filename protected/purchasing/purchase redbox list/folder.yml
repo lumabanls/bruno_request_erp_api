@@ -1,0 +1,7 @@
+info:
+  name: purchase redbox list
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

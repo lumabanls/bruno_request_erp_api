@@ -1,0 +1,26 @@
+info:
+  name: create_unit_measurements
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/unit_measurements
+  body:
+    type: json
+    data: "{\r
+
+      \   \r
+
+      \    \"code\": \"Unit Of Pcs\",\r
+
+      \    \"name\": \"PCS\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

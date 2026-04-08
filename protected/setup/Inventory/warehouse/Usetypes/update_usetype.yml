@@ -1,0 +1,17 @@
+info:
+  name: update_usetype
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/warehouse/usetype
+  body:
+    type: json
+    data: '{"bg_color":"Aquamarine","id":5,"name":"Receiving","code":"rcv 0001"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

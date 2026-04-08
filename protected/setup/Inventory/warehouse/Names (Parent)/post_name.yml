@@ -1,0 +1,69 @@
+info:
+  name: post_name
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/warehouse/name
+  body:
+    type: json
+    data: "{\r
+
+      \  \"warehouse_name\": {\r
+
+      \    \"name\": \"Heisenberg Storage\",\r
+
+      \    \"warehouse_manager\": \"Walter White | Co-admin\",\r
+
+      \    \"is_inactive\": false\r
+
+      \  },\r
+
+      \  \"warehouse_address\": {\r
+
+      \    \"building_no\": \"308\",\r
+
+      \    \"street\": \"Negra Arroyo Lane\",\r
+
+      \    \"barangay_no\": \"16\",\r
+
+      \    \"city\": \"Albuquerque\",\r
+
+      \    \"zip_code\": \"87104\",\r
+
+      \    \"country\": \"United States\",\r
+
+      \    \"contact_person\": \"Jesse Pinkman\",\r
+
+      \    \"contact_no\": \"+1-505-555-0460\"\r
+
+      \  },\r
+
+      \  \"warehouse_area\": {\r
+
+      \    \"use_type\": \"General\",\r
+
+      \    \"zone\": \"Z1\",\r
+
+      \    \"area\": \"A1\",\r
+
+      \    \"rack\": \"R2\",\r
+
+      \    \"level\": \"L3\",\r
+
+      \    \"bins\": \"5\",\r
+
+      \    \"location_code\": \"Z1-A1-R2-L3-B1 TO B5\",\r
+
+      \    \"notes\": \"Initial setup\"\r
+
+      \  }\r
+
+      }\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

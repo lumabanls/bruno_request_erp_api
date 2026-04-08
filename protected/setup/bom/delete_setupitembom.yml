@@ -1,0 +1,27 @@
+info:
+  name: delete_setupitembom
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/bom
+  body:
+    type: json
+    data: |+
+      {
+        "item_name": "Item ABC",
+        "item_code": "ABC-1234",
+        "item_model": "Model XYZ",
+        "warehouse_id": 1,
+        "production_qty": 5,
+        "type": "Production"
+      }
+
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

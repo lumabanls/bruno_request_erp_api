@@ -1,0 +1,22 @@
+info:
+  name: get_tax_setup
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/setup/tax
+  body:
+    type: text
+    data: |-
+      {
+          "code": "CODE AAAAA",
+          "name": "NAME AAAAA"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

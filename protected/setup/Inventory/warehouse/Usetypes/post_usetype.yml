@@ -1,0 +1,23 @@
+info:
+  name: post_usetype
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/warehouse/usetype
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"test 0002\",\r
+
+      \    \"name\": \"Test Usetype, deletable\"\r
+
+      }\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: update_purchaser_purchase_requisition
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/purchasing/purchase_requisition
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pr_id\": 4,\r
+
+      \    \"doc_no\": \"0002\",\r
+
+      \    //\"purchaser\": \"~\"\r
+
+      \    \"purchaser\": \"PURCH-PO-10\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

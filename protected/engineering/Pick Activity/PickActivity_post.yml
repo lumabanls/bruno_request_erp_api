@@ -1,0 +1,92 @@
+info:
+  name: PickActivity_post
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/pickAct/list
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pick_activity\": {\r
+
+      \        \"customer\": \"Wally Bayola\",\r
+
+      \        \"code\": \"2323\",\r
+
+      \        \"reference_so\": \"0002\",\r
+
+      \        \"sales_person\": \"Mister Spongebob\",\r
+
+      \        \"prepared_by\": \"Kuroko\",\r
+
+      \        \"picked_by\": \"Eren\"\r
+
+      \    },\r
+
+      \    \"pick_activity_details\": [\r
+
+      \        {\r
+
+      \            \"item_id\": 2,\r
+
+      \            \"item_code\": \"8080\",\r
+
+      \            \"item_description\": \"Item D\",\r
+
+      \            \"so_id\": 144,\r
+
+      \            \"sod_id\": 21,\r
+
+      \            \"left_qty\": 15,\r
+
+      \            \"left_uom\": \"CHL\",\r
+
+      \            \"pick_qty\": 2,\r
+
+      \            \"pick_uom\": \"CHL\",\r
+
+      \            \"bin_location\": \"12SADASDAD\",\r
+
+      \            \"order_qty\": 11\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"item_id\": 3,\r
+
+      \            \"item_code\": \"7070\",\r
+
+      \            \"item_description\": \"Item E\",\r
+
+      \            \"so_id\": 12,\r
+
+      \            \"sod_id\": 122,\r
+
+      \            \"left_qty\": 2,\r
+
+      \            \"left_uom\": \"PLD\",\r
+
+      \            \"pick_qty\": 2,\r
+
+      \            \"pick_uom\": \"PLD\",\r
+
+      \            \"bin_location\": \"12453SDAS\",\r
+
+      \            \"order_qty\": 56\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

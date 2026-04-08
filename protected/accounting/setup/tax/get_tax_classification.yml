@@ -1,0 +1,22 @@
+info:
+  name: get_tax_classification
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/accounting/tax_setup/CL
+  body:
+    type: text
+    data: |-
+      {
+          "code": "CODE AAAAA",
+          "name": "NAME AAAAA"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

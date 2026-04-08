@@ -1,0 +1,27 @@
+info:
+  name: update_model
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/item/model
+  body:
+    type: json
+    data: |-
+      {
+          "id": 3,
+              "code": "MODEL123424",
+              "name": "Sample Model 2",
+              "item_name_id": "1233",
+              "item_brand_id": "4564",
+              "catalogue_year": "2025",
+              "is_active": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

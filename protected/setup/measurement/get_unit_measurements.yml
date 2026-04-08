@@ -1,0 +1,15 @@
+info:
+  name: get_unit_measurements
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/setup/unit_measurement
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

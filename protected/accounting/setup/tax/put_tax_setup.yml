@@ -1,0 +1,22 @@
+info:
+  name: put_tax_setup
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/accounting/tax
+  body:
+    type: text
+    data: |-
+      {
+          "code": "CODE AAAAA",
+          "name": "NAME AAAAA"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

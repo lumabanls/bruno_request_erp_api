@@ -1,0 +1,68 @@
+info:
+  name: create_bulk_invoice_receipt
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/accounting/bulk_invoice_receipt
+  body:
+    type: json
+    data: "{\r
+
+      \    \"bulk_invoice_receipt\": {\r
+
+      \        \"supplier\": \"ABC Trading Corporation\",\r
+
+      \        \"supplier_code\": \"SUP-001\",\r
+
+      \        \"supplier_id\": 25,\r
+
+      \        \"supplier_address\": \"123 Makati Ave, Makati City\",\r
+
+      \        \"reference_doc\": \"PO-2026-001\",\r
+
+      \        \"payment_term\": \"30 Days\",\r
+
+      \        \"currency\": \"PHP\",\r
+
+      \        \"tax_code\": \"VAT12\",\r
+
+      \        \"tax_code_id\": 3,\r
+
+      \        \"invoice_due\": \"2026-04-11\",\r
+
+      \        \"doc_date\": \"2026-03-12\",\r
+
+      \        \"invoice_type\": \"Purchase\",\r
+
+      \        \"other_charges\": 500.00,\r
+
+      \        \"net_amount\": 10000.00,\r
+
+      \        \"twas_amount\": 1200.00,\r
+
+      \        \"ap_voucher\": true,\r
+
+      \        \"type\": \"Bulk\",\r
+
+      \        \"remarks\": \"Bulk invoice receipt for March purchases\",\r
+
+      \        \"prepared_by\": \"Patrick Bautista\"\r
+
+      \    },\r
+
+      \    \"bulk_invoice_receipt_details\": [\r
+
+      \r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

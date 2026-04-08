@@ -1,0 +1,24 @@
+info:
+  name: update cost type
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/calendar-categories/1
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"test\",\r
+
+      \    \"position\": \"test\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

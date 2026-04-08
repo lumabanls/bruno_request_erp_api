@@ -1,0 +1,102 @@
+info:
+  name: post RR2
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/report2/receiving2
+  body:
+    type: json
+    data: "{\r
+
+      \  \"receiving_report\": {\r
+
+      \    \"supplier_name\": \"ABC Supplier\",\r
+
+      \    \"supplier_code\": \"SUP-001\",\r
+
+      \    \"date_received\": \"2025-09-26\",\r
+
+      \    \"address\": \"123 Warehouse St.\",\r
+
+      \    \"supplier_id\": 10,\r
+
+      \    \"ref_doc\": \"PO-1001\",\r
+
+      \    \"prepared_by\": \"John Doe\",\r
+
+      \    \"purchase_order_id\": 55,\r
+
+      \    \"warehouse_name\": \"Main Warehouse\"\r
+
+      \  },\r
+
+      \  \"receiving_report_details\": [\r
+
+      \    {\r
+
+      \      \"item_code\": \"ITEM-001\",\r
+
+      \      \"item_description\": \"Blue Widget\",\r
+
+      \      \"ordered_qty\": \"100\",\r
+
+      \      \"ordered_uom\": \"pcs\",\r
+
+      \      \"received_qty\": \"95\",\r
+
+      \      \"received_uom\": \"pcs\",\r
+
+      \      \"rejected_qty\": \"5\",\r
+
+      \      \"rejected_uom\": \"pcs\",\r
+
+      \      \"reason_for_rejection\": \"Damaged\",\r
+
+      \      \"serial_number\": \"SN-001\",\r
+
+      \      \"bin_location\": \"A1-B2\",\r
+
+      \      \"ref_id\": 55\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"item_code\": \"ITEM-002\",\r
+
+      \      \"item_description\": \"Red Widget\",\r
+
+      \      \"ordered_qty\": \"200\",\r
+
+      \      \"ordered_uom\": \"pcs\",\r
+
+      \      \"received_qty\": \"200\",\r
+
+      \      \"received_uom\": \"pcs\",\r
+
+      \      \"rejected_qty\": \"0\",\r
+
+      \      \"rejected_uom\": \"pcs\",\r
+
+      \      \"reason_for_rejection\": \"\",\r
+
+      \      \"serial_number\": \"SN-002\",\r
+
+      \      \"bin_location\": \"A1-B3\",\r
+
+      \      \"ref_id\": 55\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: delete_pump_type
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/pump_type
+  body:
+    type: json
+    data: |-
+      {
+          "id": 7,
+          "code": "CODE-33313112",
+          "name": "Thurmanss"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

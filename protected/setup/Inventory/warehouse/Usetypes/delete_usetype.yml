@@ -1,0 +1,17 @@
+info:
+  name: delete_usetype
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/warehouse/usetype
+  body:
+    type: json
+    data: "{\r\n    \"id\": 7\r\n}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

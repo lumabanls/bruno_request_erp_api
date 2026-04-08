@@ -1,0 +1,37 @@
+info:
+  name: post_area
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/warehouse/area
+  body:
+    type: json
+    data: "{  \r
+
+      \    \"warehouse_name_id\": 8,\r
+
+      \    \"use_type\": \"Damaged\",\r
+
+      \    \"zone\": \"Z2\",\r
+
+      \    \"area\": \"A1\",\r
+
+      \    \"rack\": \"R1\",\r
+
+      \    \"level\": \"\",\r
+
+      \    \"bins\": \"\",\r
+
+      \    \"location_code\": \"\",\r
+
+      \    \"notes\": \"Secondary setup\"\r
+
+      }\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

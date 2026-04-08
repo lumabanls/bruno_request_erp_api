@@ -1,0 +1,28 @@
+info:
+  name: delete_model
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/model
+  body:
+    type: json
+    data: |-
+      {
+                  "id": 8,
+                  "name": "GAGAGA",
+                  "item_name_id": 1,
+                  "item_brand_id": 1,
+                  "catalogue_year": "GAGAGA",
+                  "is_active": true,
+                  "related_name": "Danny dsdasdsadsa",
+                  "related_brand": "ACEJET"
+              }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

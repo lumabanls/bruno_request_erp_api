@@ -1,0 +1,48 @@
+info:
+  name: update dr
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/delivery-receipts/1
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 10002,\r
+
+      \    \"request_date\": null,\r
+
+      \    \"required_date\": null,\r
+
+      \    \"released_date\": null,\r
+
+      \    \"reference_doc_no\": null,\r
+
+      \    \"doc_no\": 0,\r
+
+      \    \"requested_by\": null,\r
+
+      \    \"received_by\": null,\r
+
+      \    \"approved_by\": \"Patrick Bautista\",\r
+
+      \    \"issued_by\": \"Patrick Bautista\",\r
+
+      \    \"is_forward\": true,\r
+
+      \    \"item_release_details\": [],\r
+
+      \    \"created_at\": null,\r
+
+      \    \"updated_at\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,62 @@
+info:
+  name: post dr
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/delivery-receipts/
+  body:
+    type: json
+    data: "{\r
+
+      \  \"request_date\": \"2026-01-30\",\r
+
+      \  \"required_date\": \"2026-02-02\",\r
+
+      \  \"released_date\": \"2026-01-30\",\r
+
+      \  \"doc_no\": \"IR-2026-0005\",\r
+
+      \  \"reference_doc_no\": \"SO-2026-0020\",\r
+
+      \  \"requested_by_id\": 12,\r
+
+      \  \"issued_by_id\": \"EMP-001\",\r
+
+      \  \"sales_order_id\": 1025,\r
+
+      \r
+
+      \  \"item_release_details\": [\r
+
+      \    {\r
+
+      \      \"item_id\": 1001,\r
+
+      \      \"item_description\": \"Steel Bar 10mm\",\r
+
+      \      \"required_qty\": 100,\r
+
+      \      \"required_uom\": 3,\r
+
+      \      \"released_qty\": 100,\r
+
+      \      \"released_uom\": 3,\r
+
+      \      \"serial_no\": \"SB-0001\",\r
+
+      \      \"delivery_preference_id\": 1\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

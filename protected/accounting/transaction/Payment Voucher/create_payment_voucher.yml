@@ -1,0 +1,122 @@
+info:
+  name: create_payment_voucher
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/accounting/payment_voucher
+  body:
+    type: json
+    data: "{\r
+
+      \    \"payment_voucher\": {\r
+
+      \        \"id\": 0,\r
+
+      \        \"supplier\": \"NEW ADD ACCOUNT\",\r
+
+      \        \"supplier_code\": \"S#78\",\r
+
+      \        \"supplier_id\": 50227,\r
+
+      \        \"reference_apv\": \"10006\",\r
+
+      \        \"currency\": \"PHP\",\r
+
+      \        \"transaction_amount\": 8000.0,\r
+
+      \        \"doc_no\": \"\",\r
+
+      \        \"doc_date\": \"02/21/2026\",\r
+
+      \        \"remarks\": \"\",\r
+
+      \        \"cash_amount\": 8000.0,\r
+
+      \        \"check_amount\": 0.0,\r
+
+      \        \"check_bank\": \"\",\r
+
+      \        \"check_account_no\": \"\",\r
+
+      \        \"ref_check_no\": \"\",\r
+
+      \        \"check_date\": \"02/21/2026\",\r
+
+      \        \"transfer_amount\": 0.0,\r
+
+      \        \"transfer_type\": \"\",\r
+
+      \        \"transfer_bank\": \"\",\r
+
+      \        \"transfer_account_no\": \"\",\r
+
+      \        \"ref_doc_no\": \"\",\r
+
+      \        \"ref_doc_date\": \"02/21/2026\",\r
+
+      \        \"prepared_by\": \"Eren Jaeger\"\r
+
+      \    },\r
+
+      \    \"payment_voucher_details\": [\r
+
+      \        {\r
+
+      \            \"id\": 0,\r
+
+      \            \"payment_voucher_id\": 0,\r
+
+      \            \"doc_no\": \"0014\",\r
+
+      \            \"due_date\": \"01/31/2026\",\r
+
+      \            \"trans_amount\": 1212.0,\r
+
+      \            \"open_amount\": 1212.0,\r
+
+      \            \"amount_applied\": 1212.0,\r
+
+      \            \"twas_applied\": 0.0,\r
+
+      \            \"balance\": 0.0,\r
+
+      \            \"receipt_type\": null\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"id\": 0,\r
+
+      \            \"payment_voucher_id\": 0,\r
+
+      \            \"doc_no\": \"20017\",\r
+
+      \            \"due_date\": \"01/20/2026\",\r
+
+      \            \"trans_amount\": 6458.4,\r
+
+      \            \"open_amount\": 6458.4,\r
+
+      \            \"amount_applied\": 700.0,\r
+
+      \            \"twas_applied\": 0.0,\r
+
+      \            \"balance\": 5758.4,\r
+
+      \            \"receipt_type\": null\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

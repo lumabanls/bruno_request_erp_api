@@ -1,0 +1,54 @@
+info:
+  name: get_quotation
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/project_conditions
+  body:
+    type: json
+    data: "{\r
+
+      \    \"branch\": \"Sales\",\r
+
+      \    \"project_id\": \"4\",\r
+
+      \r
+
+      \    \"sales_project_content_advanced_condition\": {\r
+
+      \        \"conditions_id\": 1,\r
+
+      \        \"based_id\": 1,\r
+
+      \        \"pump_brand\": \"asd\",\r
+
+      \        \"driver_type\": \"asd\",\r
+
+      \        \"pressure\": \"\",\r
+
+      \        \"motor_enclosure\": \"okay po\",\r
+
+      \        \"motor_manufacturer\": \"hahhaa\",\r
+
+      \        \"liquid_type\": \"nice\",\r
+
+      \        \"controller_manufacturer\": \"asdasda\",\r
+
+      \        \"starting_method\": \"\",\r
+
+      \        \"suction_size\": \"\",\r
+
+      \        \"discharge_size\": \"\"\r
+
+      \    }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

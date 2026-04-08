@@ -1,0 +1,23 @@
+info:
+  name: delete_name
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/name
+  body:
+    type: json
+    data: |-
+      {
+          "id": 2,
+          "code": "EWQEQE",
+          "name": "EWQEQE"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

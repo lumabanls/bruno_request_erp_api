@@ -1,0 +1,48 @@
+info:
+  name: get item releases Copy 2
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/item-releases/item-stock-and-locations/1
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 1,\r
+
+      \    \"request_date\": null,\r
+
+      \    \"required_date\": null,\r
+
+      \    \"released_date\": null,\r
+
+      \    \"reference_doc_no\": null,\r
+
+      \    \"doc_no\": 0,\r
+
+      \    \"requested_by\": null,\r
+
+      \    \"received_by\": null,\r
+
+      \    \"approved_by\": null,\r
+
+      \    \"issued_by\": null,\r
+
+      \    \"is_forward\": true,\r
+
+      \    \"item_release_details\": null,\r
+
+      \    \"created_at\": null,\r
+
+      \    \"updated_at\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

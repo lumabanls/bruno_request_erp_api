@@ -1,0 +1,18 @@
+info:
+  name: create_application
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/sales/quotation
+  body:
+    type: json
+    data: '{"warranty":"1 year","valid_until":"2025-01-22","bill_to":"COD","ship_to":"COD","ship_type":"PICKUP","date":"2025-01-22","application_id":1,"purpose":"BUDGET","contact_no_2":"","contact_no_1":"","thru":"","addressed_to":"","created_by":"","payment_terms_id":1,"version_no":"1","document_no":"Q#0001","days":"30","customer_code":"sdf","customer_name":"sdf"}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

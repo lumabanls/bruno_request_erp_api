@@ -1,0 +1,124 @@
+info:
+  name: ItemRequest_post
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/item/request
+  body:
+    type: json
+    data: "{\r
+
+      \    \"item_request\": {\r
+
+      \        \"doc_no\": \"REQ-001\",\r
+
+      \        \"purpose\": \"All purpose queen\",\r
+
+      \        \"req_date\": \"05/24/2002\",\r
+
+      \        \"issue_date\": \"03/20/2025\",\r
+
+      \        \"req_by\": \"Mister Crabs\",\r
+
+      \        \"received_by\": \"Sandy\",\r
+
+      \        \"approved_by\": \"Plankton\",\r
+
+      \        \"issued_by\": \"Plankton\",\r
+
+      \        \"required_date\": \"07/20/2025\",\r
+
+      \        \"is_forward\": true\r
+
+      \    },\r
+
+      \    \"item_request_details\": [\r
+
+      \        {\r
+
+      \            \"item_id\": 9,\r
+
+      \            \"item_description\": \"Item C\",\r
+
+      \            \"req_qty\": 20,\r
+
+      \            \"req_uom\": \"BLK\",\r
+
+      \            \"issued_qty\": 10,\r
+
+      \            \"total_req\": 15,\r
+
+      \            \"total_issued\": 20,\r
+
+      \            \"issued_uom\": \"BLK\",\r
+
+      \            \"serial_no\": \"12ASHA23\",\r
+
+      \            \"remarks\": \"hello po\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"item_id\": 10,\r
+
+      \            \"item_description\": \"Item D\",\r
+
+      \            \"req_qty\": 20,\r
+
+      \            \"req_uom\": \"BOX\",\r
+
+      \            \"issued_qty\": 10,\r
+
+      \            \"total_req\": 15,\r
+
+      \            \"total_issued\": 20,\r
+
+      \            \"issued_uom\": \"BOX\",\r
+
+      \            \"serial_no\": \"12ASHA23\",\r
+
+      \            \"remarks\": \"sarap bombahin\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"item_request_location\": [\r
+
+      \        {\r
+
+      \            \"ir_details_id\": 7,\r
+
+      \            \"issued_uom\": \"BLK\",\r
+
+      \            \"location\": \"DANGERZONE-AOE-RACKER\",\r
+
+      \            \"warehouse_id\": 3\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"ir_details_id\": 7,\r
+
+      \            \"issued_uom\": \"BLK\",\r
+
+      \            \"location\": \"Z1-A2-R2-L6-B1\",\r
+
+      \            \"warehouse_id\": 2\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

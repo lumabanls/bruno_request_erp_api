@@ -1,0 +1,15 @@
+info:
+  name: post_journal_entry
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/accounting/journal_entry
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

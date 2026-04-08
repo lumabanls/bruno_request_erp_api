@@ -1,0 +1,26 @@
+info:
+  name: post_model
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/item/model
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Sample Model 4444\",\r
+
+      \    \"catalogue_year\": \"202544\",\r
+
+      \    \"is_active\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

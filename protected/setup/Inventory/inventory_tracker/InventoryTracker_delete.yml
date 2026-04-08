@@ -1,0 +1,18 @@
+info:
+  name: InventoryTracker_delete
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/inv/tracker
+  body:
+    type: json
+    data: "{\r\n    \"id\": 5\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

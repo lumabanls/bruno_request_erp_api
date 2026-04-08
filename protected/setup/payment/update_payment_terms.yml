@@ -1,0 +1,26 @@
+info:
+  name: update_payment_terms
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/unit_measurement
+  body:
+    type: json
+    data: "    {\r
+
+      \            \"id\": 33,\r
+
+      \            \"code\": \"Unit Of Pcs\",\r
+
+      \            \"name\": \"PCS\"\r
+
+      \        }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

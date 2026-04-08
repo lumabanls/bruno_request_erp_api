@@ -1,0 +1,26 @@
+info:
+  name: delete_application
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/sales/application
+  body:
+    type: json
+    data: " {\r
+
+      \    \"id\": 3,\r
+
+      \    \"code\": \"123\",\r
+
+      \    \"name\": \"dagisan\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

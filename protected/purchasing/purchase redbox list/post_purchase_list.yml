@@ -1,0 +1,58 @@
+info:
+  name: post_purchase_list
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: ""
+  body:
+    type: json
+    data: "{\r
+
+      \    \"date_request\": \"2025-12-01\",\r
+
+      \    \"date_required\": \"2025-12-10\",\r
+
+      \    \"request_by\": \"John Doe\",\r
+
+      \    \"department\": \"Procurement\",\r
+
+      \    \"contact_no\": \"+912 9876 5432\",\r
+
+      \    \"doc_no\": \"PR-20251201-001\",\r
+
+      \    \"justification\": \"Urgent requirement for production line.\",\r
+
+      \    \"remarks\": \"Ensure expedited delivery.\",\r
+
+      \    \"approval\": \"Approved by Sarah Lee\",\r
+
+      \  \"purchasing_purchase_requisition_orders\": [\r
+
+      \    {\r
+
+      \      \"item_id\": 5012,\r
+
+      \      \"net_total\": 1999.99\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"item_id\": 5023,\r
+
+      \      \"net_total\": 499.50\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,106 @@
+info:
+  name: New Request_1
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/purchasing/purchase_order
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 0,\r
+
+      \    \"supplier_id\": 1005,\r
+
+      \    \"supplier_name\": \"ABC Supplies Co.\",\r
+
+      \    \"supplier_code\": \"SUP123\",\r
+
+      \    \"address\": \"123 Supply Street, City\",\r
+
+      \    \"tin_no\": \"123-456-789\",\r
+
+      \    \"fax_no\": \"123-4567\",\r
+
+      \    \"main_tel_no\": \"987-6543\",\r
+
+      \    \"ship_type\": 1,\r
+
+      \    \"deliver_to\": \"Warehouse 3\",\r
+
+      \    \"deliver_via\": \"LBC Express\",\r
+
+      \    \"doc_no\": \"PO-2025-001\",\r
+
+      \    \"date\": \"2025-05-07\",\r
+
+      \    \"order_type\": \"SO\",\r
+
+      \    \"tax_code\": \"VAT12\",\r
+
+      \    \"payment_terms\": \"30 Days\",\r
+
+      \    \"bill_to\": \"Main Office\",\r
+
+      \    \"reference_docs\": \"REQ-456, QUO-789\",\r
+
+      \    \"status\": \"Pending\",\r
+
+      \    \"remarks\": \"Urgent order\",\r
+
+      \    \"net_of_vat\": 10000.00,\r
+
+      \    \"total_amount_due\": 11200.00,\r
+
+      \    \"purchase_order_details\": [\r
+
+      \        {\r
+
+      \            \"id\": 0,\r
+
+      \            \"based_id\": 1,\r
+
+      \            \"item_id\": 101,\r
+
+      \            \"item_code\": \"ITEM001\",\r
+
+      \            \"item_name\": \"Printer Ink\",\r
+
+      \            \"req_qty\": 10,\r
+
+      \            \"order_qty\": 10,\r
+
+      \            \"unit_price\": 1000.00,\r
+
+      \            \"discount\": \"10\",\r
+
+      \            \"discounted_price\": 900.00,\r
+
+      \            \"total_price\": 9000.00\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"sales_order_details\": [\r
+
+      \        {\r
+
+      \            \"order_details_id\": 50112,\r
+
+      \            \"allocated_qty\": 6\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

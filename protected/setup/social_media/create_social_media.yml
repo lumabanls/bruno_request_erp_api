@@ -1,0 +1,26 @@
+info:
+  name: create_social_media
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/social_media
+  body:
+    type: json
+    data: "{\r
+
+      \   \r
+
+      \    \"code\": \"FB\",\r
+
+      \    \"name\": \"FACEBOOk\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

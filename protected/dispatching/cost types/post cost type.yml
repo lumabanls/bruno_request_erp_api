@@ -1,0 +1,24 @@
+info:
+  name: post cost type
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/calendar-cost-types
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"OTHERS\",\r
+
+      \    \"name\": \"OTHERS\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

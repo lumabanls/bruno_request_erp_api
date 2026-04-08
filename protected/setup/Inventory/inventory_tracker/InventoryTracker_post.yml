@@ -1,0 +1,24 @@
+info:
+  name: InventoryTracker_post
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/inv/tracker
+  body:
+    type: json
+    data: "{\r
+
+      \  \"pod_id\": 123,\r
+
+      \  \"remarks\": \"Received shipment for October\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

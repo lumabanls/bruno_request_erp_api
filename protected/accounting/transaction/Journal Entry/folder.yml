@@ -1,0 +1,7 @@
+info:
+  name: Journal Entry
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

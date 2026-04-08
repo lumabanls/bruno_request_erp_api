@@ -1,0 +1,41 @@
+info:
+  name: create_setupitembom
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/bom
+  body:
+    type: json
+    data: |-
+      {
+          "item_id": "FEB27",
+          "production_qty": 1,
+          "production_type": "DISASSEMBLE",
+          "labor": "ENGINEERS",
+          "bom_details": [
+              {
+                  "item_id": 111,
+                  "size": 2,
+                  "bom_qty": 9320
+              },
+              {
+                  "item_id": 11112,
+                  "size": 2,
+                  "bom_qty": 22
+              },
+              {
+                  "item_id": 23525,
+                  "size": 3,
+                  "bom_qty": 554
+              }
+          ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

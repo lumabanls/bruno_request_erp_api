@@ -1,0 +1,18 @@
+info:
+  name: order_delete
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/sales/order
+  body:
+    type: json
+    data: "{\r\n  \"order_id\": 1\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

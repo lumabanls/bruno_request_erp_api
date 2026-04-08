@@ -1,0 +1,25 @@
+info:
+  name: update_address
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/warehouse/address
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 2,\r
+
+      \r
+
+      \    \"contact_person\": \"\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

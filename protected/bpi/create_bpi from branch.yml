@@ -1,0 +1,52 @@
+info:
+  name: create_bpi from branch
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/bpi/createbpi
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 0,\r
+
+      \    \"name\": \"New Parent BPI\",\r
+
+      \    \"sales_id\": \"S123\",\r
+
+      \    \"main_website\": \"https://example.com\",\r
+
+      \    \"tin\": \"000-000-000-00000\",\r
+
+      \    \"main_tel_no\": \"+63-912-345-6789\",\r
+
+      \    \"general_id\": 90327\r
+
+      }\r
+
+      \r
+
+      {\r
+
+      \    \"name\": \"NEW MANILA\",\r
+
+      \    \"sales_id\": \"PURCH-PO-8\",\r
+
+      \    \"main_website\": \"WWWWWWW\",\r
+
+      \    \"tin\": \"000-000-000-00000\",\r
+
+      \    \"main_tel_no\": \"0977-263-7267\",\r
+
+      \    \"general_id\": \"90328\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

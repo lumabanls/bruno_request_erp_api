@@ -1,0 +1,28 @@
+info:
+  name: get_application
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/application
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 2,\r
+
+      \    \"code\": \"hhhh\",\r
+
+      \    \"name\": \"424242\",\r
+
+      \    \"is_active\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

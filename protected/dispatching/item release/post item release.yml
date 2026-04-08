@@ -1,0 +1,74 @@
+info:
+  name: post item release
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/item-releases
+  body:
+    type: json
+    data: "{\r
+
+      \  \"request_date\": \"2026-01-31\",\r
+
+      \  \"required_date\": \"2026-02-02\",\r
+
+      \  \"released_date\": \"2026-02-01\",\r
+
+      \r
+
+      \  \"doc_no\": \"IR-0004\",\r
+
+      \  \"reference_doc_no\": \"SO-1023\",\r
+
+      \r
+
+      \  \"requested_by_id\": 1,\r
+
+      \  \"received_by_id\": 2,\r
+
+      \  \"approved_by_id\": 3,\r
+
+      \  \"issued_by_id\": 3,\r
+
+      \r
+
+      \  \"is_forward\": true,\r
+
+      \r
+
+      \  \"item_release_details\": [\r
+
+      \    {\r
+
+      \      \"item_release_id\": 0,\r
+
+      \      \"item_id\": 10,\r
+
+      \      \"item_description\": \"Steel Bar 10mm\",\r
+
+      \      \"required_qty\": 100,\r
+
+      \      \"required_uom\": \"PCS\",\r
+
+      \      \"released_qty\": 90,\r
+
+      \      \"released_uom\": \"PCS\",\r
+
+      \      \"serial_no\": \"SN-001\",\r
+
+      \      \"delivery_preference_id\": 1\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,48 @@
+info:
+  name: post_item
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/item
+  body:
+    type: json
+    data: "{\r
+
+      \    \"item_code\": \"ITEM12923003\",\r
+
+      \    \"item_name_id\": 1,\r
+
+      \    \"item_model\": \"Model X\",\r
+
+      \    \"catalogue_year\": \"2025\",\r
+
+      \    \"short_desc\": \"A short description of the item.\",\r
+
+      \    \"item_class_id\": 2,\r
+
+      \    \"item_brand_id\": 3,\r
+
+      \    \"unit_of_measure_id\": 4,\r
+
+      \    \"trade_type_id\": [\r
+
+      \        2\r
+
+      \    ],\r
+
+      \    \"item_tangibility_type\": \"physical\",\r
+
+      \    \"is_stop_selling\": false,\r
+
+      \    \"price\": 100.50\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

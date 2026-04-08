@@ -1,0 +1,44 @@
+info:
+  name: New Request
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/calendar-schedules/
+  body:
+    type: json
+    data: "{\r
+
+      \  \"department\": \"SALES\",\r
+
+      \  \"category_id\": 3,\r
+
+      \  \"start_date\": \"2026-01-25\",\r
+
+      \  \"end_date\": \"2026-01-27\",\r
+
+      \  \"title\": \"Pickup Truck Delivery\",\r
+
+      \  \"description\": \"Receive pick-up onsite\",\r
+
+      \  \"location\": \"Area 3\",\r
+
+      \  \"people\": \"Sales Team A\",\r
+
+      \  \"notes\": \"Bring driving license\",\r
+
+      \  \"reference_doc_no\": \"SO#122\",\r
+
+      \  \"reference_id\": 23\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,19 @@
+info:
+  name: get_bulk_invoice_receipt
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/accounting/bulk_invoice_receipt?seek_id=24
+  params:
+    - name: seek_id
+      value: "24"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

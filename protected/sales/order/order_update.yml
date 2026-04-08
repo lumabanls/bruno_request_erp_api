@@ -1,0 +1,98 @@
+info:
+  name: order_update
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/sales/order
+  body:
+    type: json
+    data: "{\r
+
+      \    \"order_id\": 20007,\r
+
+      \    \"purchaser\": \"PURCH-PO-8\"\r
+
+      }\r
+
+      // {\r
+
+      //                 \"order_id\": 4,\r
+
+      //                 \"customer\": \"Global Electronics Ltd.\",\r
+
+      //                 \"code\": \"GEL-789\",\r
+
+      //                 \"delivery_to\": \"Warehouse 5, 321 Industrial Zone\",\r
+
+      //                 \"bill_to\": \"Accounts Dept, Global Electronics HQ\",\r
+
+      //                 \"document_no\": \"ORD-20231105-012\",\r
+
+      //                 \"date\": \"2023-11-05\",\r
+
+      //                 \"delivery_date\": \"2023-11-12\",\r
+
+      //                 \"payment_terms\": \"COD\",\r
+
+      //                 \"ship_type\": \"Air Freight\",\r
+
+      //                 \"ref_doc\": \"QUOT-20231101-015\",\r
+
+      //                 \"ref_id\": 215,\r
+
+      //                 \"status\": \"Dispatched\",\r
+
+      //                 \"sales_executive\": \"James Carter\",\r
+
+      //                 \"receiver\": \"Night Shift Supervisor\",\r
+
+      //                 \"contact_no\": \"+852 1234 5678\",\r
+
+      //                 \"remarks\": \"Urgent: Handle with care (Updated)\",\r
+
+      //                 \"vat\": 345.67,\r
+
+      //                 \"net_of_vat\": 2304.47,\r
+
+      //                 \"total_amount_due\": 2650.14,\r
+
+      //                 \"approved_by\": \"Linda Martinez\",\r
+
+      //                 \"approved_by_id\": 331,\r
+
+      //                 \"tin\": \"\",\r
+
+      //                 \"sales_order_details\": {\r
+
+      //                 \"order_details_id\": 4,\r
+
+      //                 \"based_id\": 4,\r
+
+      //                 \"qty\": \"601 cartons\",\r
+
+      //                 \"item_code\": \"IC-789X\",\r
+
+      //                 \"item_description\": \"Industrial Temperature Sensors v2.5\",\r
+
+      //                 \"delivery_preference\": \"Refrigerated Transport\",\r
+
+      //                 \"list_price\": 55.99,\r
+
+      //                 \"total_price\": 2799.5,\r
+
+      //                 \"status\": \"Quality Check Passed\",\r
+
+      //                 \"has_stocks\": false\r
+
+      //             }\r
+
+      //             }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

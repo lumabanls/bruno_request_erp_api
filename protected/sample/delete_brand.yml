@@ -1,0 +1,35 @@
+info:
+  name: delete_brand
+  type: http
+  seq: 2
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/sample/parent
+  body:
+    type: json
+    data: |-
+      {
+          "id": 10004,
+          "name": "parent name 6aaa",
+          "description": "parent description 6bbb",
+          "childf": {
+              "id": 10004,
+              "parent_id": 10004,
+              "name": "child name 6ccc",
+              "description": "child description 6ddd"
+          },
+          "childs": {
+              "id": 10004,
+              "parent_id": 10004,
+              "type": "child type 6eee",
+              "model": "child model 6fff"
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

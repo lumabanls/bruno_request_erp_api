@@ -1,0 +1,84 @@
+info:
+  name: view_file
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/setup/bom
+  body:
+    type: json
+    data: "{\r
+
+      \  \"SalesQuotation\": {\r
+
+      \    \"id\": 1,\r
+
+      \    \"project_name\": \"project ni kriis brown\",\r
+
+      \    \"customer_id\": 0,\r
+
+      \    \"application_id\": 0,\r
+
+      \    \"payment_terms_id\": 1,\r
+
+      \    \"ship_to_id\": 10026,\r
+
+      \    \"bill_to_id\": 10026,\r
+
+      \    \"ship_type_id\": 1,\r
+
+      \    \"purpose\": \"BUDGET\",\r
+
+      \    \"date\": \"2025-04-03 17:25:36\",\r
+
+      \    \"validity_days\": \"\",\r
+
+      \    \"valid_until\": \"2025-04-03 17:25:36\",\r
+
+      \    \"warranty\": \"1 year\",\r
+
+      \    \"address_to\": \"1231231\",\r
+
+      \    \"thru\": \"2131231\",\r
+
+      \    \"gross_sales\": 0,\r
+
+      \    \"vat_amount\": 0,\r
+
+      \    \"net_sales\": 0,\r
+
+      \    \"percent_discount\": 0,\r
+
+      \    \"discounted_amount\": 0,\r
+
+      \    \"cash_discount\": 0,\r
+
+      \    \"net_amount_due\": 0,\r
+
+      \    \"total_amount_due\": 1.1,\r
+
+      \    \"contact_1\": \"\",\r
+
+      \    \"contact_2\": \"\",\r
+
+      \    \"document_no\": \"1\",\r
+
+      \    \"version_no\": \"1\",\r
+
+      \    \"created_by\": \"12312312\",\r
+
+      \    \"final_ref_no\": \"\",\r
+
+      \    \"is_finalized\": false\r
+
+      \  }\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,15 @@
+info:
+  name: get_engineering_redbox_job_order
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: http://{{host}}:{{port}}/api/engineering/redboxlist/quotation
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

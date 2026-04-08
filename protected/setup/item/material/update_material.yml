@@ -1,0 +1,23 @@
+info:
+  name: update_material
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/item/material
+  body:
+    type: json
+    data: |-
+      {
+          "id": 2,
+          "code": "CODE-2222",
+          "name": "UPDATED 2222"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

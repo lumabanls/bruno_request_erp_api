@@ -1,0 +1,26 @@
+info:
+  name: ItemRequest_delete
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/setup/item/request
+  body:
+    type: json
+    data: "{\r
+
+      \    \"item_request\": {\r
+
+      \        \"id\": 49\r
+
+      \    }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

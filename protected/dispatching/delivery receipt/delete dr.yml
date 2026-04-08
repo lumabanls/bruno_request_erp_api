@@ -1,0 +1,24 @@
+info:
+  name: delete dr
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: http://{{host}}:{{port}}/api/delivery-receipts/1
+  body:
+    type: text
+    data: "{\r
+
+      \    \"code\": \"test\",\r
+
+      \    \"name\": \"test\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

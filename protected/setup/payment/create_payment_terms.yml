@@ -1,0 +1,26 @@
+info:
+  name: create_payment_terms
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/payment_terms
+  body:
+    type: json
+    data: "{\r
+
+      \   \r
+
+      \    \"code\": \"CODB\",\r
+
+      \    \"name\": \"CODB\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

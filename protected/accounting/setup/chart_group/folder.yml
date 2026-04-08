@@ -1,0 +1,7 @@
+info:
+  name: chart_group
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

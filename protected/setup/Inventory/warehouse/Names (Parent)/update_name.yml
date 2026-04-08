@@ -1,0 +1,77 @@
+info:
+  name: update_name
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/warehouse/name
+  body:
+    type: json
+    data: "{\r
+
+      \    \"data\": {\r
+
+      \        \"warehouse_name\": {\r
+
+      \            \"id\": 1,\r
+
+      \            // \"code\": \"WH#0004\",\r
+
+      \            \"name\": \"saveeeeeee\",\r
+
+      \            \"warehouse_manager\": \"Walter White | Co-admin\",\r
+
+      \            \"is_inactive\": false\r
+
+      \        },\r
+
+      \        \"warehouse_address\": {  \r
+
+      \            \"building_no\": \"bld 4\",\r
+
+      \            \"street\": \"strt 4\",\r
+
+      \            \"barangay_no\": \"brnggy 400\",\r
+
+      \            \"city\": \"4th city\",\r
+
+      \            \"zip_code\": \"1040\",\r
+
+      \            \"country\": \"4th world country\",\r
+
+      \            \"contact_person\": \"Jj\",\r
+
+      \            \"contact_no\": \"+0 000 00000\"\r
+
+      \        },\r
+
+      \        \"warehoues_area\": {  \r
+
+      \        \"use_type\": \"General\",\r
+
+      \        \"zone\": \"z4\",\r
+
+      \        \"area\": \"a4\",\r
+
+      \        \"rack\": \"r4\",\r
+
+      \        \"level\": \"l4\",\r
+
+      \        \"bins\": \"4\",\r
+
+      \        \"location_code\": \"\",\r
+
+      \        \"notes\": \"there is no code for this yet it has to have one\"\r
+
+      \        }\r
+
+      \    }\r
+
+      }\r\n"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

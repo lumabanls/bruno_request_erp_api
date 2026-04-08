@@ -1,0 +1,186 @@
+info:
+  name: update RR
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/report/receiving
+  body:
+    type: json
+    data: "{\r
+
+      \    \"receiving_report\": {\r
+
+      \        \"address\": \"\",\r
+
+      \        \"purchase_order_id\": 0,\r
+
+      \        \"ref_doc\": \"\",\r
+
+      \        \"supplier_id\": 0,\r
+
+      \        \"prepared_by\": \"Shouxi Zhixing Guan | Admin\",\r
+
+      \        \"id\": 10025,\r
+
+      \        \"supplier_code\": \"******\",\r
+
+      \        \"date_received\": \"08/07/2025 1:01:41 pm\",\r
+
+      \        \"supplier_name\": \"Jc\",\r
+
+      \        \"doc\": \"RR#10025\"\r
+
+      \    },\r
+
+      \    \"receiving_report_details\": [\r
+
+      \        {\r
+
+      \            \"item_code\": \"RB001\",\r
+
+      \            \"item_description\": \"Banana Red\",\r
+
+      \            \"ordered_qty\": \"15\",\r
+
+      \            \"ordered_uom\": \"BLK\",\r
+
+      \            \"received_qty\": \"12\",\r
+
+      \            \"received_uom\": \"BLK\",\r
+
+      \            \"rejected_qty\": \"3\",\r
+
+      \            \"rejected_uom\": \"DMG\",\r
+
+      \            \"reason_for_rejection\": \"Croissant\",\r
+
+      \            \"ref_id\": 0,\r
+
+      \            \"id\": 10062,\r
+
+      \            \"receiving_report_id\": 10025\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"item_code\": \"RH001\",\r
+
+      \            \"item_description\": \"Red Hose\",\r
+
+      \            \"ordered_qty\": \"8\",\r
+
+      \            \"ordered_uom\": \"CASE\",\r
+
+      \            \"received_qty\": \"8\",\r
+
+      \            \"received_uom\": \"CASE\",\r
+
+      \            \"rejected_qty\": \"0\",\r
+
+      \            \"rejected_uom\": \"N/A\",\r
+
+      \            \"reason_for_rejection\": \"\",\r
+
+      \            \"ref_id\": 0,\r
+
+      \            \"id\": 10063,\r
+
+      \            \"receiving_report_id\": 10025\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"item_code\": \"RR001\",\r
+
+      \            \"item_description\": \"Red Rows\",\r
+
+      \            \"ordered_qty\": \"100\",\r
+
+      \            \"ordered_uom\": \"BQT\",\r
+
+      \            \"received_qty\": \"100\",\r
+
+      \            \"received_uom\": \"BQT\",\r
+
+      \            \"rejected_qty\": \"0\",\r
+
+      \            \"rejected_uom\": \"N/A\",\r
+
+      \            \"reason_for_rejection\": \"\",\r
+
+      \            \"ref_id\": 0,\r
+
+      \            \"id\": 10064,\r
+
+      \            \"receiving_report_id\": 10025\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"item_code\": \"\",\r
+
+      \            \"item_description\": \"\",\r
+
+      \            \"ordered_qty\": \"\",\r
+
+      \            \"ordered_uom\": \"\",\r
+
+      \            \"received_qty\": \"\",\r
+
+      \            \"received_uom\": \"\",\r
+
+      \            \"rejected_qty\": \"\",\r
+
+      \            \"rejected_uom\": \"\",\r
+
+      \            \"reason_for_rejection\": \"\",\r
+
+      \            \"ref_id\": 0,\r
+
+      \            \"id\": 10065,\r
+
+      \            \"receiving_report_id\": 10025\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"receiving_report_inventory\": [\r
+
+      \        {\r
+
+      \            \"item_code\": \"RP001\",\r
+
+      \            \"item_description\": \"Cool ah earphone\",\r
+
+      \            \"ordered_qty\": \"15\",\r
+
+      \            \"ordered_uom\": \"BLK\",\r
+
+      \            \"serial_numbers\": \"\",\r
+
+      \            \"bin_location\": \"GENERAL-Z1-A2-L1-6\",\r
+
+      \            \"id\": 18,\r
+
+      \            \"ref_id\": 0,\r
+
+      \            \"receiving_report_id\": 10025\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

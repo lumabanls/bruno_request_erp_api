@@ -1,0 +1,24 @@
+info:
+  name: post_class
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://{{host}}:{{port}}/api/setup/item/class
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"CODE-33313112\",\r
+
+      \    \"name\": \"Thurmanss\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

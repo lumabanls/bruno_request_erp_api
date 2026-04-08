@@ -1,0 +1,60 @@
+info:
+  name: PickActivity_put
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: http://{{host}}:{{port}}/api/setup/pickAct/list
+  body:
+    type: json
+    data: "{\r
+
+      \  \"item_request\": {\r
+
+      \    \"id\": 2,\r
+
+      \    \"doc_no\": \"REQ-002\",\r
+
+      \    \"purpose\": \"Updated All purpose flour\",\r
+
+      \    \"req_date\": \"01/20/2025\",\r
+
+      \    \"issue_date\": \"03/18/2025\",\r
+
+      \    \"required_date\": \"05/23/2025\",\r
+
+      \    \"received_by\": \"Papa P\",\r
+
+      \    \"issued_by\": \"Squidward\",\r
+
+      \    \"is_forward\": true\r
+
+      \  },\r
+
+      \  \"item_request_details\": [\r
+
+      \    {\r
+
+      \      \"id\": 3,\r
+
+      \      \"item_id\": 5,\r
+
+      \      \"item_description\": \"Item A\",\r
+
+      \      \"req_qty\": 10,\r
+
+      \      \"req_uom\": \"pcs\"\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
