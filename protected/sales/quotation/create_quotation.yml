@@ -8,7 +8,70 @@ http:
   url: http://{{host}}:{{port}}/api/sales/quotation
   body:
     type: json
-    data: '{"warranty":"1 year","valid_until":"2025-01-22","bill_to":"COD","ship_to":"COD","ship_type":"PICKUP","date":"2025-01-22","application_id":1,"purpose":"BUDGET","contact_no_2":"","contact_no_1":"","thru":"","addressed_to":"","created_by":"","payment_terms_id":1,"version_no":"1","document_no":"Q#0001","days":"30","customer_code":"sdf","customer_name":"sdf"}'
+    data: |-
+      {
+        "project_name": "HVAC Installation - Building A",
+        "customer_id": 101,
+        "application_id": 3,
+        "payment_terms_id": 2,
+        "ship_to_id": 5,
+        "bill_to_id": 5,
+        "ship_type_id": 1,
+        "purpose": "Supply and Installation of HVAC Units",
+        "date": "2026-04-20",
+        "validity_days": "30",
+        "valid_until": "2026-05-20",
+        "warranty": "12 months from date of installation",
+        "address_to": "Engr. Juan dela Cruz",
+        "thru": "Ms. Maria Santos, Procurement Manager",
+        "gross_sales": 250000.00,
+        "vat_amount": 30000.00,
+        "net_sales": 220000.00,
+        "percent_discount": 5.00,
+        "discounted_amount": 12500.00,
+        "additional_discounted": 2500.00,
+        "cash_discount": 5000.00,
+        "net_amount_due": 230000.00,
+        "total_amount_due": 260000.00,
+        "contact_1": "+63 917 123 4567",
+        "contact_2": "+63 922 987 6543",
+        "document_no": "SQ-2026-00123",
+        "version_no": "1",
+        "sub_version_no": "0",
+        "created_by": "jdelacruz",
+        "final_ref_no": "FIN-2026-00123",
+        "is_finalized": false,
+        "is_project": true, 
+        "sales_quotation_quick": [
+          {
+            "ref_id": 42,
+            "based_id": 1,
+            "bom_id": 2,
+            "item_id": 3,
+            "reference_code": "REF-2026-001",
+            "components": "Steel Frame, Bolts, Gasket",
+            "model": "MDL-X200",
+            "qty": 10,
+            "man_days": 5,
+            "labor_rate": 850.00,
+            "unit_of_measure": "PCS",
+            "list_price": 12500.00,
+            "unit_price": 11000.00,
+            "percent_discount": "12%",
+            "net_discount": 1500.00,
+            "net_total": 110000.00,
+            "line_total": 110000.00,
+            "short_description": "Supply and installation of MDL-X200 steel frame assembly",
+            "quick_selected_image" : [
+              {
+              "quotation_quick_id" : 1,
+              "image_id" : 1,
+              "is_selected" : true
+              }
+            ]
+          }
+        ]
+      }
   auth: inherit
 
 settings:

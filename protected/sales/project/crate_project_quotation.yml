@@ -1,0 +1,172 @@
+info:
+  name: crate_project_quotation
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: ""
+  body:
+    type: json
+    data: |-
+      {
+        "project_name": "HVAC Installation - Building A",
+        "customer_id": 101,
+        "application_id": 3,
+        "payment_terms_id": 2,
+        "ship_to_id": 5,
+        "bill_to_id": 5,
+        "ship_type_id": 1,
+        "purpose": "Supply and Installation of HVAC Units",
+        "date": "2026-04-20",
+        "validity_days": "30",
+        "valid_until": "2026-05-20",
+        "warranty": "12 months from date of installation",
+        "address_to": "Engr. Juan dela Cruz",
+        "thru": "Ms. Maria Santos, Procurement Manager",
+        "gross_sales": 250000.00,
+        "vat_amount": 30000.00,
+        "net_sales": 220000.00,
+        "percent_discount": 5.00,
+        "discounted_amount": 12500.00,
+        "additional_discounted": 2500.00,
+        "cash_discount": 5000.00,
+        "net_amount_due": 230000.00,
+        "total_amount_due": 260000.00,
+        "contact_1": "+63 917 123 4567",
+        "contact_2": "+63 922 987 6543",
+        "document_no": "SQ-2026-00123",
+        "version_no": "1",
+        "sub_version_no": "0",
+        "created_by": "jdelacruz",
+        "final_ref_no": "FIN-2026-00123",
+        "is_finalized": false,
+        "is_project": true,
+        "sales_project_multiplier": [
+          {
+            "multiplier_id": 1,
+            "based_id": 123,
+            "brand": "Carrier",
+            "component": "Compressor",
+            "description": "Scroll Compressor for Commercial HVAC Unit",
+            "multiplier": "1.35"
+          },
+          {
+            "multiplier_id": 1,
+            "based_id": 123,
+            "brand": "Carrier",
+            "component": "Compressor",
+            "description": "Scroll Compressor for Commercial HVAC Unit",
+            "multiplier": "1.35"
+          }
+        ],
+        "sales_project_history": [
+          {
+            "based_id": 123,
+            "user": "jdelacruz",
+            "date": "2026-04-20",
+            "time": "09:45:00",
+            "old_data": "{\"unit_price\": 95000.00, \"qty\": 1}",
+            "new_data": "{\"unit_price\": 90000.00, \"qty\": 2}"
+          }
+        ],
+        "sales_project_item_set": {
+          "based_id": 1,
+          "tab_number": "1"
+        },
+        "sales_project_content": {
+          "content_id": 1,
+          "based_id": 123,
+          "item_designation": "P-101",
+          "application": "Chilled Water Circulation",
+          "additional": "With base plate and coupling guard",
+          "flow": "250 GPM",
+          "head": "45 m TDH",
+          "voltage": "380V",
+          "rpm": "1450",
+          "hp": "25",
+          "phase": "3",
+          "no_of_sets": "2",
+          "no_of_pump_set": "1",
+          "item_set_description": "Horizontal End-Suction Centrifugal Pump Set",
+          "item_set_notes": "Standby unit included; alternating operation required",
+          "assign_engineer_user_id": 7,
+          "template_project_id": 4,
+          "is_wiring": true,
+          "sales_project_content_final": [
+            {
+              "sales_project_content_id": 1,
+              "final": "pump",
+              "fla": 1,
+              "voltage": 1
+            }
+          ]
+        },
+        "sales_project_content_advanced_condition": {
+          "conditions_id": 1,
+          "based_id": 123,
+          "pump_brand": "Grundfos",
+          "driver_type": "Direct Drive",
+          "pressure": "10 bar",
+          "motor_enclosure": "TEFC",
+          "motor_manufacturer": "ABB",
+          "liquid_type": "Clean Water",
+          "controller_manufacturer": "Schneider Electric",
+          "starting_method": "Variable Frequency Drive (VFD)",
+          "suction_size": "6 inches",
+          "discharge_size": "4 inches"
+        },
+        "sales_project_items": [
+          {
+            "items_id": 1,
+            "template_id": 4,
+            "based_id": 123,
+            "bom_id": 7,
+            "item_id": 55,
+            "reference_code": "GRF-CM3-150",
+            "man_days": 3,
+            "labor_rate": 850.00,
+            "components": "Centrifugal Pump",
+            "model": "CM3-150-A-R-A-E-AQQE",
+            "item_inv_type": "MATERIAL",
+            "qty": 2,
+            "multiplier": "1.35",
+            "discount_price": 12500.00,
+            "list_price_per_unit": 95000.00,
+            "component_total": 190000.00,
+            "notes": "Includes mechanical seal and coupling guard",
+            "sales_quotation_selected_images": [
+              {
+                "quotation_quick_id": 1,
+                "image_id": 1,
+                "is_selected": true
+              }
+            ]
+          }
+        ],
+        "sales_project_wiring": [
+          {
+            "based_id": 123,
+            "materials": "THHN Stranded Copper Wire",
+            "amp_req": "60A",
+            "wire_req": "14mm²",
+            "description": "Power wiring for pump motor control panel",
+            "num_of_wires_set": "3",
+            "num_of_qty_set": "2",
+            "distance_travelled_set": "25",
+            "allowance_wire_set": "1.15",
+            "qty": 2,
+            "num_of_sets": "2",
+            "total_qty": 4,
+            "cost": 3500.00,
+            "total_cost": 14000.00
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
